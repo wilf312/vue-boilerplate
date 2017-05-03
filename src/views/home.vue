@@ -9,8 +9,7 @@
 
 <script>
 // ------ 宣言
-import { getFileName } from 'util/index'
-const componentName = getFileName(__filename)
+const componentName = __filename.match(/^src\/[\w|\\/]*\/(\w*).(vue|js)$/)[1]
 
 // -- コンポーネント
 import Navi from 'components/home/Navi'
