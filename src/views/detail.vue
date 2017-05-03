@@ -8,8 +8,7 @@
 
 <script>
 // ------ 宣言
-import { getFileName } from 'util/index'
-const componentName = getFileName(__filename)
+const componentName = __filename.match(/^src\/[\w|\\/]*\/(\w*).(vue|js)$/)[1]
 
 import { mapState } from 'vuex'
 import router from 'vue-router'
